@@ -1,0 +1,97 @@
+* {
+    padding:0px;
+    margin: 0px;
+    /*border: 1px solid #333;*/
+}
+
+body {
+    background-color: lightyellow;
+    padding: 0px 10%;
+}
+
+header {
+    background-color: red;
+    font-size: 32pt;
+    padding: 2em 0em .5em 1em;
+}
+
+nav {
+    background-color: black;
+    padding: 30px;
+    color: red;
+}
+
+aside {
+    color: white;
+    background-color: blue;
+    float: left;
+    width: 10%;
+    padding: 5%
+}
+
+article {
+    background-color: yellow;
+    width: 50%;
+    padding: 5%;
+    float: left;
+    
+    background-image: url(images/background.jpg);
+    
+}
+
+footer {
+    background-color: purple;
+    clear: both;
+    padding: 3em 10%;
+}
+
+
+nav ul {
+    list-style: none;
+    padding: 1em;
+}
+
+nav ul li {
+    float: left;
+
+}
+
+nav a {
+    font-family: sans-serif;
+    color: red;
+    padding: .5em;
+    text-decoration: none;
+}
+
+nav a:hover {
+    background: red;
+    color: white;
+}
+
+
+
+
+
+
+#article-image {
+    width: 30%;
+    float: right;
+}
+
+#right-aside {
+    float:right;
+}
+
+nav .active {
+    color: white;
+    background: green;
+}
+
+
+
+
+
+
+
+
+
