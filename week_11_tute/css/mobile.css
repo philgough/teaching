@@ -1,0 +1,349 @@
+/* mobile.css - styles are applied to all sizes */
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html, body {
+	height: 100%;
+}
+
+body {
+	background: #ddd;
+	min-width: 320px;
+	max-width: 1000px;
+	margin: 0 auto;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 16px;
+	line-height: 24px;
+	color: #333;
+}
+
+header, footer {
+	padding: 3% 5%;
+}
+
+/* Navigation */
+nav {
+	height: 50px;
+	text-align: center;
+}
+
+nav li {
+	list-style: none;
+	display: block;
+}
+
+nav a {
+	display: block;
+	color: black;
+	text-decoration: none;
+}
+
+/* top level items */
+nav > ul > li {
+	float: left;
+	position: relative;
+	width: 25%;
+}
+
+nav > ul > li > a {
+	font-size: 1.1em;
+	font-weight: bold;
+	height: 50px;
+	line-height: 50px;
+	background-color: white;
+	background-repeat: no-repeat;
+	background-position: center 15px;
+	padding-top: 64px;
+}
+
+nav > ul > li.cats > a {
+	background-image: url(../images/animal-icons/cat.png);
+}
+
+nav > ul > li.dogs > a {
+	background-image: url(../images/animal-icons/dog.png);
+}
+
+nav > ul > li.fish > a {
+	background-image: url(../images/animal-icons/fish.png);
+}
+
+nav > ul > li.birds > a {
+	background-image: url(../images/animal-icons/bird.png);
+}
+
+
+/* submenu items */
+
+nav > ul > li.dogs > ul.submenu {
+	left: -100%;
+}
+
+
+nav ul.submenu {
+	background: white;
+	position: absolute;
+	top: 114px;
+	width: 400%;
+	padding: 10% 0px;
+	border-top: 3px solid lightgreen;
+	visibility: hidden;
+	height: 0px;
+
+	-webkit-transition: all .2s .4s ease;
+	-moz-transition: all .2s .4s ease;
+	transition: all .2s .4s ease;
+}
+
+nav ul.submenu > li > a {
+	line-height: 40px;
+}
+
+nav ul.submenu > li {
+	opacity: 0;
+	transition: all .2s ease-out;
+}
+
+/* hover nav */
+
+nav > ul > li:hover > ul.submenu {
+	visibility: visible;
+	height: 100%;
+	
+	-webkit-transition: all .2s ease;
+	-moz-transition: all .2s ease;
+	transition: all .2s ease;
+}
+
+nav ul.submenu > li:hover > a {
+	background-color: lightgreen;
+}
+
+
+nav > ul > li:hover > ul.submenu > li {
+	opacity: 1;
+	transition: all .2s .4s ease-out;
+}
+
+
+/* Header */
+
+header {
+	height: 50%;
+	padding-top: 25%;
+	background-color: black;
+	background-image: url(../images/header-background.jpg);
+	background-size: cover;
+	background-position: center center;
+	color: white;
+	text-align: center;
+}
+
+header h1 {
+	font-weight: normal;
+	margin-bottom: 5%;
+	font-size: 3em;
+	line-height: 1em;
+	text-shadow: rgba(0,0,0,0.5) 0 0 10px;
+}
+
+header p {
+	font-style: italic;
+	font-size: 1.5em;
+	text-shadow: rgba(0,0,0,0.5) 0 0 10px;
+}
+
+#header-button {
+	margin-top: 10%;
+	display: inline-block;
+	color: white;
+	text-decoration: none;
+	border: 2px solid white;
+	padding: 0.5em 1em;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+#header-button:hover {
+	background-color: white;
+	color: #333;
+}
+
+/* Main content */
+
+#main-content {
+	background: white;
+	padding: 5%;
+}
+
+#main-content ul, #main-content ol {
+	margin-left: 2em;
+	margin-bottom: 1em;
+}
+
+#main-content li {
+	margin-bottom: 0.5em;
+}
+
+#main-content h2, #main-content h3, #main-content p {
+	margin-bottom: 1em;
+}
+
+/* Full image */
+
+#full-image img {
+	max-width: 100%;
+	display: block; /* Removes extraneous spacing below image */
+}
+
+/* About section */
+
+#about {
+	background: lightblue;
+	overflow: hidden;
+	text-align: center;
+}
+
+#about article {
+	padding: 3% 5%;
+}
+
+#about article h2 {
+	margin-bottom: 0.5em;
+}
+
+/* Face section */
+
+#face {
+	background: white;
+	padding: 30% 20%;
+}
+
+/* -- Face container */
+
+#face ul {
+	background: yellow;
+	border-radius: 30%;
+	position: relative;
+	padding-top: 120%; /* Instead of using height, this makes the face height responsively a little bigger than the face width. */
+	-webkit-transition: all 0.5s ease;
+	-moz-transition: all 0.5s ease;
+	transition: all 0.5s ease;
+}
+
+/* -- Facial features */
+
+#face li {
+	list-style: none;
+	position: absolute;
+	width: 10%;
+	height: 10%;
+	background: purple;
+	border-radius: 50px;
+	text-indent: -9999px; /* Hides text off the screen without hiding the box */
+	-webkit-transition: all 0.5s cubic-bezier(.87,-.41,.19,2.44);
+	-moz-transition: all 0.5s cubic-bezier(.87,-.41,.19,2.44);
+	transition: all 0.5s cubic-bezier(.87,-.41,.19,2.44);
+}
+
+#face li.hair {
+	width: 30%;
+	height: 35%;
+	background: brown;
+	left: 35%;
+	top: -35%;
+	border-bottom-left-radius: 0;
+	border-bottom-right-radius: 0;
+}
+
+#face li.eye { /* Applies to both eyes */
+	top: 20%;
+	width: 25%;
+	height: 15%;
+	border-radius: 100%;
+	background: white;
+}
+
+#face li.left-eye {
+	left: 15%;
+}
+
+#face li.right-eye {
+	right: 15%;
+}
+
+#face li.pupil { /* Applies to both pupils */
+	background: black;
+	top: 23%;
+	width: 12%;
+	height: 10%;
+	border-radius: 100%;
+}
+
+#face li.left-pupil {
+	left: 21%;
+}
+
+#face li.right-pupil {
+	right: 21%;
+}
+
+#face li.nose {
+	top: 40%;
+	left: 40%;
+	width: 20%;
+	height: 20%;
+	background: red;
+}
+
+#face li.mouth {
+	bottom: 15%;
+	width: 60%;
+	left: 20%;
+	height: 15%;
+}
+
+#face li.tongue {
+	background: red;
+	border-top-left-radius: 0;
+	border-top-right-radius: 0;
+	width: 20%;
+	height: 0%;
+	top: 75%;
+	right: 30%;
+	z-index: 1;
+}
+
+/* -- Facial features on hover */
+
+#face ul:hover {
+	-webkit-transform: rotate(10deg);
+	-moz-transform: rotate(10deg);
+	transform: rotate(10deg);
+}
+
+#face ul:hover li.pupil {
+	-webkit-transform: scale(1.3);
+	-moz-transform: scale(1.3);
+	transform: scale(1.3);
+}
+
+#face ul:hover li.mouth {
+	border-top-left-radius: 0;
+	border-top-right-radius: 0;
+}
+
+#face ul:hover li.tongue {
+	height: 30%;
+}
+
+/* Footer */
+
+footer {
+	background: darkblue;
+	color: white;
+	text-align: center;
+}

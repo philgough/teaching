@@ -1,0 +1,49 @@
+/* wide.css - styles are only applied when browser window is larger than 480px */
+
+body {
+	min-width: 1000px;
+}
+
+/* Navigation */
+nav {
+	text-align: left;
+}
+
+nav > ul > li > a {
+	padding: 0px;
+	background-position: 15px top;
+	height: 64px;
+	line-height: 60px;
+	padding-left: 90px;
+}
+
+nav > ul > li.dogs ul.submenu {
+	left: 0%;
+}
+
+
+/* submenu items */
+nav ul.submenu {
+	top: 64px;
+	width: 100%;	
+}
+
+nav ul.submenu > li > a {
+	padding: 0px 20px;; 
+}
+nav > ul > li:hover > ul.submenu {
+	height: 200%;
+}
+
+/* Main content */
+
+#main-content {
+	padding: 5% 10%;
+}
+
+/* About section */
+
+#about article {
+	float: left;
+	width: 40%;
+}
